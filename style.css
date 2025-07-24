@@ -1,0 +1,111 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0b0c10;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* navbar */
+.navbar {
+    background-color: #0b0c10;
+    box-shadow: 0 2px 10px rgba(102, 252, 241, 0.2);
+}
+.navbar-brand {
+    color: #66fcf1 !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.nav-link {
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+}
+.nav-link:hover {
+    color: #66fcf1 !important;
+    text-shadow: 0 0 5px #66fcf1;
+}
+
+/* custom toggle icon */
+.navbar-toggler {
+    padding: 0.25rem 0.5rem;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+.custom-toggler-icon {
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    background-color: #66fcf1;
+    position: relative;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.custom-toggler-icon::before,
+.custom-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #66fcf1;
+    transition: all 0.3s ease;
+}
+.custom-toggler-icon::before {
+    top: -10px;
+}
+.custom-toggler-icon::after {
+    top: 10px;
+}
+
+/* hero section */
+.hero-section {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+#bg-video {
+    z-index: -1;
+    object-fit: cover;
+}
+.overlay {
+    z-index: 1;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+}
+.neon-text {
+    color: #66fcf1;
+    text-shadow: 0 0 10px #66fcf1, 0 0 20px #45a29e;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #66fcf1, 0 0 20px #45a29e;
+    }
+
+    to {
+        text-shadow: 0 0 20px #66fcf1, 0 0 40px #45a29e;
+    }
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #1f2833;
+}
+::-webkit-scrollbar-thumb {
+    background: #66fcf1;
+    border-radius: 10px;
+    border: 2px solid #0b0c10;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #45a29e;
+}
+
+/* footer */
+footer a:hover {
+    color: #66fcf1;
+    text-shadow: 0 0 5px #66fcf1;
+}
