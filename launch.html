@@ -26,13 +26,13 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#hero">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#keywords">Keywords</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#inventions">Inventions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#news">News</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="booking.html">Book Flight</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link text-warning fw-semibold" href="#">Live Launch 🚀</a></li>
+                    <li class="nav-item"><a class="nav-link text-warning fw-semibold" href="#">Live Launch 🔴</a></li>
+                    <li class="nav-item"><a class="nav-link text-warning fw-semibold" href="booking.html">Book Flight 🚀</a></li>
                 </ul>
             </div>
         </div>
@@ -41,7 +41,8 @@
     <!-- launch section -->
     <section class="text-center bg-black" style="padding-top: 6rem; padding-bottom: 1.5rem;">
         <h2 class="mb-4 text-light">🔴 Live Drone/Rocket Launch</h2>
-        <div class="video-frame mx-auto mb-4" style="max-width: 800px; border: 5px solid #4e54c8; border-radius: 20px; overflow: hidden; padding-top: 0.35rem;">
+        <div class="video-frame mx-auto mb-4"
+            style="max-width: 800px; border: 5px solid #4e54c8; border-radius: 20px; overflow: hidden; padding-top: 0.35rem;">
             <iframe width="100%" height="450" src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID"
                 title="Live Stream" frameborder="0" allowfullscreen></iframe>
         </div>
@@ -63,13 +64,12 @@
                     <h6 class="text-info">Quick Links</h6>
                     <ul class="list-unstyled">
                         <li><a href="index.html#hero" class="text-white text-decoration-none">Home</a></li>
-                        <li><a href="index.html#keywords" class="text-white text-decoration-none">Space Keywords</a>
-                        </li>
+                        <li><a href="index.html#keywords" class="text-white text-decoration-none">Space Keywords</a></li>
                         <li><a href="index.html#inventions" class="text-white text-decoration-none">Inventions</a></li>
-                        <li><a href="index.html#news" class="text-white text-decoration-none">News</a></li>
-                        <li><a href="booking.html" class="text-white text-decoration-none" target="_blank">Book Flight</a></li>
+                        <li><a href="news.html" class="text-white text-decoration-none">News</a></li>
                         <li><a href="index.html#contact" class="text-white text-decoration-none">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link text-warning fw-semibold" href="#" target="_blank">Live Launch 🚀</a></li>
+                    <li class="nav-item"><a class="nav-link text-warning fw-semibold" href="#">Live Launch</a></li>
+                    <li class="nav-item"><a class="nav-link text-warning fw-semibold" href="booking.html">Book Flight</a></li>
                     </ul>
                 </div>
             </div>
@@ -86,8 +86,26 @@
     <!-- bootstrap js link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- js link -->
-    <script src="launch.js"></script>
+    <!-- extra script -->
+    <script>
+        const launchDate = new Date("2025-08-01T14:00:00").getTime();
+        const countdownEl = document.getElementById("countdown");
+
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = launchDate - now;
+
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hrs = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                const mins = Math.floor((diff / (1000 * 60)) % 60);
+                const secs = Math.floor((diff / 1000) % 60);
+                countdownEl.innerHTML = `${days}d ${hrs}h ${mins}m ${secs}s`;
+            } else {
+                countdownEl.innerHTML = "🚀 Launch in progress or completed!";
+            }
+        }, 1000);
+    </script>
 </body>
 
 </html>
