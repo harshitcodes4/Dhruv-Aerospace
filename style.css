@@ -1,7 +1,7 @@
 body {
     font-family: 'Orbitron', sans-serif;
     background-color: #0b0c10;
-    color: white;
+    color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -12,19 +12,18 @@ body {
     box-shadow: 0 2px 10px rgba(102, 252, 241, 0.2);
 }
 .navbar-brand {
-    color: #66fcf1 !important;
+    color: #0dcaf0 !important;
     font-weight: bold;
     letter-spacing: 1px;
 }
 .nav-link {
-    color: #ffffff !important;
+    color: #ffffff !important;    
     transition: all 0.3s ease;
 }
 .nav-link:hover {
-    color: #66fcf1 !important;
-    text-shadow: 0 0 5px #66fcf1;
+    color: #0dcaf0 !important;
+    text-shadow: 0 0 5px #0dcaf0;
 }
-
 /* custom toggle icon */
 .navbar-toggler {
     padding: 0.25rem 0.5rem;
@@ -36,7 +35,7 @@ body {
     display: inline-block;
     width: 30px;
     height: 3px;
-    background-color: #66fcf1;
+    background-color: #0dcaf0;
     position: relative;
     transition: all 0.3s ease;
     margin-top: 5px;
@@ -48,7 +47,7 @@ body {
     position: absolute;
     width: 30px;
     height: 3px;
-    background-color: #66fcf1;
+    background-color: #0dcaf0;
     transition: all 0.3s ease;
 }
 .custom-toggler-icon::before {
@@ -64,28 +63,21 @@ body {
     overflow: hidden;
     position: relative;
 }
-#bg-video {
-    z-index: -1;
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    z-index: -1;
 }
 .overlay {
+    position: relative;
     z-index: 1;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
-}
-.neon-text {
-    color: #66fcf1;
-    text-shadow: 0 0 10px #66fcf1, 0 0 20px #45a29e;
-    animation: glow 2s ease-in-out infinite alternate;
-}
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px #66fcf1, 0 0 20px #45a29e;
-    }
-
-    to {
-        text-shadow: 0 0 20px #66fcf1, 0 0 40px #45a29e;
-    }
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 250px;
 }
 
 /* custom scrollbar */
@@ -96,16 +88,10 @@ body {
     background: #1f2833;
 }
 ::-webkit-scrollbar-thumb {
-    background: #66fcf1;
+    background: #0dcaf0;
     border-radius: 10px;
     border: 2px solid #0b0c10;
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #45a29e;
-}
-
-/* footer */
-footer a:hover {
-    color: #66fcf1;
-    text-shadow: 0 0 5px #66fcf1;
 }
