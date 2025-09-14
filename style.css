@@ -57,29 +57,6 @@ body {
     top: 10px;
 }
 
-/* hero section */
-.hero-section {
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-}
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-.overlay {
-    position: relative;
-    z-index: 1;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 250px;
-}
-
 /* custom scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
@@ -94,4 +71,11 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #45a29e;
+}
+
+/* media queries */
+@media (max-width: 550px) {
+    .custom-toggler-icon {
+        margin-right: 10px;
+    }
 }
