@@ -17,6 +17,7 @@
 
     <!-- css -->
     <style>
+        /* section1 */
         .containerMain {
             height: 100vh;
             display: flex;
@@ -63,6 +64,8 @@
                 transform: translateY(0);
             }
         }
+
+        /* section2 */
         .video-section {
             height: 100vh;
             overflow: hidden;
@@ -82,6 +85,22 @@
         .border {
             width: 25rem;
         }
+
+        /* media queries */
+        @media (max-width: 768px) {
+            .drone-img {
+                margin-top: 100px;
+                max-width: 350px;
+            }
+            .drone-name {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 425px) {
+            .border {
+                width: 20rem;
+            }
+        }
     </style>
 </head>
 
@@ -96,18 +115,16 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li><a class="nav-link" href="engineering.html">Engineering</a></li>
-                    <li><a class="nav-link" href="rocket.html">Rocket</a></li>
                     <li><a class="nav-link" href="#">Drone</a></li>
                     <li><a class="nav-link" href="news.html">News</a></li>
                     <li><a class="nav-link" href="connect.html">Connect</a></li>
-                    <li><a class="nav-link" href="launch.html">Book A Launch🚀</a></li>
                     <li><a class="nav-link fw-semibold" href="live.html">Live🔴</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- drone showcase -->
+    <!-- section1 -->
     <section class="container containerMain">
         <div class="row align-items-center">
             <div class="col-md-5 text-center">
@@ -120,7 +137,7 @@
         </div>
     </section>
 
-    <!-- explore technology -->
+    <!-- section2 -->
     <section class="video-section position-relative text-center text-white">
         <video autoplay muted loop playsinline class="w-100 h-100 position-absolute top-0 start-0 object-fit-cover">
             <source src="assets/drone-bg.mp4" type="video/mp4">
@@ -147,11 +164,9 @@
                     <h6 class="text-info">Quick Links</h6>
                     <ul class="list-unstyled">
                         <li><a class="text-decoration-none text-white" href="engineering.html">Engineering</a></li>
-                        <li><a class="text-decoration-none text-white" href="rocket.html">Rocket</a></li>
                         <li><a class="text-decoration-none text-white" href="#">Drone</a></li>
                         <li><a class="text-decoration-none text-white" href="news.html">News</a></li>
                         <li><a class="text-decoration-none text-white" href="connect.html">Connect</a></li>
-                        <li><a class="text-decoration-none text-white" href="#">Book A Launch</a></li>
                         <li><a class="text-decoration-none text-white fw-bold" href="live.html">Live</a></li>
                     </ul>
                 </div>
@@ -159,7 +174,7 @@
             <hr class="border-info">
             <p class="mb-0 small">&copy; 2025 Dhruv Aerospace. All rights reserved.<br>
                 <span class="text-secondary">Website designed & developed by
-                    <a href="https://saxenaharshit63.github.io/Portfolio-Website/" target="_blank"
+                    <a href="https://harshitcodes4.github.io/Portfolio-Website/" target="_blank"
                         class="text-info text-decoration-none">Harshit Saxena</a>
                 </span>
             </p>
